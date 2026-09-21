@@ -1,56 +1,26 @@
-name: Build NeoForge Mod
-
-on:
-  push:
-    branches: [ "master" ] # メインブランチにプッシュされた時に実行（環境に合わせて変更してください）
-  pull_request:
-    branches: [ "master" ]
-  workflow_dispatch: # 手動実行も可能にする
+name: Build
+on: [ push ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-    # NeoForge 1.21.1 は Java 21 が必須です
-    - name: Set up JDK 21
-      uses: actions/setup-java@v4
-      with:
-        java-version: '21'
-        distribution: 'temurin'
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '21'
 
-    # Gradleのキャッシュを有効にしてビルドを高速化
-    - name: Setup Gradle
-      uses: gradle/actions/setup-gradle@v4
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
 
-    # 実行権限を付与してビルドを実行
-    - name: Grant execute permission for gradlew
-      run: chmod +x gradlew
+      - name: Build with Gradle
+        run: ./gradlew build
 
-    - name: Build with Gradle
-      run: ./gradlew build
-
-    # ビルドされたJARファイルをZIPにまとめる
-    - name: Package Artifacts into ZIP
-      run: |
-        mkdir -p dist
-        # build/libs 内の通常のJARファイル（-sourcesや-devなどを除くメインのJAR）をコピー
-        # プロジェクトのGradle設定に合わせて適宜ファイル名を調整してください
-        cp build/libs/*-all.jar dist/ 2>/dev/null || cp build/libs/*.jar dist/
-        
-        # もし特定のファイルだけを確実に入れたい場合は、以下のように直接指定も可能です
-        # cp build/libs/yourmod-*.jar dist/
-        
-        cd dist
-        zip -r ../mod-artifacts.zip .
-
-    # GitHubのワークフローページからダウンロードできるようにアップロード
-    - name: Upload Artifact
-      uses: actions/upload-artifact@v4
-      with:
-        name: Minecraft-Mod-Builds # ダウンロード時の名前
-        path: mod-artifacts.zip
-        retention-days: 5 # 保存期間（任意で変更可能、最大90日）
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-jars
+          path: build/libs/*.jar
