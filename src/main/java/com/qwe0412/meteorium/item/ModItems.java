@@ -15,7 +15,7 @@ import java.util.List;
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(Meteorium.MODID);
 
-    private static final ResourceLocation EMPTY_SLOTS_METEORIUM_UPGRADE = ResourceLocation.fromNamespaceAndPath("meteorium", "empty_slots_meteorium_upgrade");
+    //private static final ResourceLocation EMPTY_SLOTS_METEORIUM_UPGRADE = ResourceLocation.fromNamespaceAndPath("meteorium", "empty_slots_meteorium_upgrade");
 
     public static final DeferredItem<Item> METEORIUM_UPGRADE = ITEMS.register(
             "meteorium_upgrade",
@@ -26,7 +26,7 @@ public class ModItems {
                     Component.translatable("item.minecraft.smithing_template.netherite_upgrade.base_slot_description"),
                     Component.translatable("item.meteorium.meteorium_ingot.add"),
                     List.of(),
-                    List.of(EMPTY_SLOTS_METEORIUM_UPGRADE)
+                    List.of()
             )
     );
 
