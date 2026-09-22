@@ -1,7 +1,6 @@
 package com.qwe0412.meteorium.datagen;
 
 import com.qwe0412.meteorium.Meteorium;
-import com.qwe0412.meteorium.block.ModBlocks;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
@@ -9,7 +8,6 @@ import net.minecraft.data.loot.LootTableProvider;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 
