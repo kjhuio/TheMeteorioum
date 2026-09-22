@@ -14,5 +14,8 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         basicItem(ModItems.METEORIUM_UPGRADE.get());
+        basicItem(ModItems.METEORIUM_INGOT.get());
+
+        handheldItem(ModItems.METEORIUM_AXE.get());
     }
 }

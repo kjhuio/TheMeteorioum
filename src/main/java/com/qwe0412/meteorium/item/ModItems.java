@@ -4,8 +4,10 @@ import com.qwe0412.meteorium.Meteorium;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.SmithingTemplateItem;
+import net.minecraft.world.item.Tiers;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -28,6 +30,25 @@ public class ModItems {
                     List.of(),
                     List.of()
             )
+    );
+
+    public static final DeferredItem<Item> METEORIUM_AXE = ITEMS.register(
+            "meteorium_axe",
+            () -> new AxeItem(
+                    ModTiers.METEORIUM,
+                    new Item.Properties().attributes(
+                            AxeItem.createAttributes(
+                                    ModTiers.METEORIUM,
+                                    15,
+                                    -3.5f
+                            )
+                    ).durability(Integer.MAX_VALUE)
+            )
+    );
+
+    public static final DeferredItem<Item> METEORIUM_INGOT = ITEMS.register(
+            "meteorium_ingot",
+            () -> new Item(new Item.Properties())
     );
 
     public static void register(IEventBus eventBus) {

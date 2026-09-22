@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "meteorium:meteorium_ingot"
+  },
+  "base": {
+    "item": "minecraft:diamond_axe"
+  },
+  "result": {
+    "count": 1,
+    "id": "meteorium:meteorium_axe"
+  },
+  "template": {
+    "item": "meteorium:meteorium_upgrade"
+  }
+}
