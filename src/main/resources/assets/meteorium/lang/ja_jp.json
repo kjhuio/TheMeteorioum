@@ -1,4 +1,10 @@
 {
   "block.meteorium.stardust_reverie": "星屑の夢殻",
-  "block.meteorium.star_cinder": "星の燃殻"
+  "block.meteorium.star_cinder": "星の燃殻",
+
+  "item.meteorium.meteorium_upgrade": "星の鍛冶型",
+  "item.meteorium.meteorium_ingot": "メテオリウムインゴット",
+  "item.meteorium.meteorium_ingot.add": "メテオリウムインゴットを置いてください",
+
+  "upgrade.meteorium.meteorium_upgrade": "メテオリウム強化"
 }

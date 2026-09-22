@@ -1,4 +1,10 @@
 {
   "block.meteorium.stardust_reverie": "Stardust Reverie",
-  "block.meteorium.star_cinder": "Star Cinder"
+  "block.meteorium.star_cinder": "Star Cinder",
+
+  "item.meteorium.meteorium_upgrade": "Star Smithing Template",
+  "item.meteorium.meteorium_ingot": "Meteorium Ingot",
+  "item.meteorium.meteorium_ingot.add": "Add Meteorium Ingot",
+
+  "upgrade.meteorium.meteorium_upgrade": "Meteorium Upgrade"
 }
