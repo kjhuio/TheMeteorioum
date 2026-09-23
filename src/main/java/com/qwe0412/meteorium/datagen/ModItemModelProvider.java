@@ -17,5 +17,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.METEORIUM_INGOT.get());
 
         handheldItem(ModItems.METEORIUM_AXE.get());
+        handheldItem(ModItems.METEORIUM_PICKAXE.get());
     }
 }

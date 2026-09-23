@@ -4,10 +4,7 @@ import com.qwe0412.meteorium.Meteorium;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.AxeItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.SmithingTemplateItem;
-import net.minecraft.world.item.Tiers;
+import net.minecraft.world.item.*;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -43,6 +40,20 @@ public class ModItems {
                                     -3.5f
                             )
                     ).durability(Integer.MAX_VALUE)
+            )
+    );
+
+    public static final DeferredItem<Item> METEORIUM_PICKAXE = ITEMS.register(
+            "meteorium_pickaxe",
+            () -> new PickaxeItem(
+                    ModTiers.METEORIUM,
+                    new Item.Properties().attributes(
+                            PickaxeItem.createAttributes(
+                                    ModTiers.METEORIUM,
+                                    4,
+                                    -2.8f
+                            )
+                    )
             )
     );
 
