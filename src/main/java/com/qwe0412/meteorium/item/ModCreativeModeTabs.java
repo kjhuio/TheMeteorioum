@@ -33,6 +33,7 @@ public class ModCreativeModeTabs {
                                 output.accept(ModTools.METEORIUM_AXE);
                                 output.accept(ModTools.METEORIUM_PICKAXE);
                                 output.accept(ModTools.METEORIUM_SHOVEL);
+                                output.accept(ModTools.METEORIUM_HOE);
                             }
                     )
                     .title(Component.translatable("itemGroup.meteorium.the_meteorium").withStyle(Meteorium.MOD_THEME_COLOR))
