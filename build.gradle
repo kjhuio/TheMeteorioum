@@ -107,7 +107,7 @@ neoForge {
 
         // Can be used to explicitly disable this subsystem. By default, it will be enabled automatically as soon
         // as parchmentArtifact or minecraftVersion and mappingsVersion are set.
-        // enabled = true
+        enabled = true
     }
 }
 
