@@ -3,6 +3,7 @@ package com.qwe0412.meteorium.item;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.PickaxeItem;
+import net.minecraft.world.item.ShovelItem;
 import net.neoforged.neoforge.registries.DeferredItem;
 
 import static com.qwe0412.meteorium.item.ModItems.ITEMS;
@@ -32,6 +33,20 @@ public class ModTools {
                                     ModTiers.METEORIUM,
                                     4,
                                     -2.8f
+                            )
+                    )
+            )
+    );
+
+    public static final DeferredItem<Item> METEORIUM_SHOVEL = ITEMS.register(
+            "meteorium_shovel",
+            () -> new ShovelItem(
+                    ModTiers.METEORIUM,
+                    new Item.Properties().attributes(
+                            ShovelItem.createAttributes(
+                                    ModTiers.METEORIUM,
+                                    1.5F,
+                                    -3.0F
                             )
                     )
             )

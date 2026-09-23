@@ -23,9 +23,41 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     @Override
     protected void buildRecipes(@NotNull RecipeOutput recipeOutput) {
-        SmithingTransformRecipeBuilder.smithing(Ingredient.of(ModItems.METEORIUM_UPGRADE.get()), Ingredient.of(Items.DIAMOND_AXE), Ingredient.of(ModItems.METEORIUM_INGOT.get()), RecipeCategory.MISC, ModTools.METEORIUM_AXE.get())
-                .unlocks("has_meteorium_ingot", has(ModItems.METEORIUM_INGOT.get()))
+        SmithingTransformRecipeBuilder.smithing(
+                Ingredient.of(ModItems.METEORIUM_UPGRADE.get()),
+                        Ingredient.of(Items.DIAMOND_AXE),
+                        Ingredient.of(ModItems.METEORIUM_INGOT.get()),
+                        RecipeCategory.MISC, ModTools.METEORIUM_AXE.get()
+                ).unlocks("has_meteorium_ingot", has(ModItems.METEORIUM_INGOT.get()))
                 .save(recipeOutput,ResourceLocation.fromNamespaceAndPath(Meteorium.MODID, "smithing/meteorium_axe"));
+        SmithingTransformRecipeBuilder.smithing(
+                Ingredient.of(
+                        ModItems.METEORIUM_UPGRADE.get()
+                ),
+                Ingredient.of(
+                        Items.DIAMOND_PICKAXE
+                ),
+                Ingredient.of(
+                        ModItems.METEORIUM_INGOT.get()
+                ),
+                RecipeCategory.MISC,
+                ModTools.METEORIUM_PICKAXE.get()
+                ).unlocks("has_meteorium_ingot", has(ModItems.METEORIUM_INGOT.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(Meteorium.MODID, "smithing/meteorium_pickaxe"));
+        SmithingTransformRecipeBuilder.smithing(
+                        Ingredient.of(
+                                ModItems.METEORIUM_UPGRADE.get()
+                        ),
+                        Ingredient.of(
+                                Items.DIAMOND_SHOVEL
+                        ),
+                        Ingredient.of(
+                                ModItems.METEORIUM_INGOT.get()
+                        ),
+                        RecipeCategory.MISC,
+                        ModTools.METEORIUM_SHOVEL.get()
+                ).unlocks("has_meteorium_ingot", has(ModItems.METEORIUM_INGOT.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(Meteorium.MODID, "smithing/meteorium_shovel"));
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.METEORIUM_BLOCK.get())
                 .pattern("###")
                 .pattern("###")
