@@ -58,6 +58,20 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         ModTools.METEORIUM_SHOVEL.get()
                 ).unlocks("has_meteorium_ingot", has(ModItems.METEORIUM_INGOT.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(Meteorium.MODID, "smithing/meteorium_shovel"));
+        SmithingTransformRecipeBuilder.smithing(
+                        Ingredient.of(
+                                ModItems.METEORIUM_UPGRADE.get()
+                        ),
+                        Ingredient.of(
+                                Items.DIAMOND_SWORD
+                        ),
+                        Ingredient.of(
+                                ModItems.METEORIUM_INGOT.get()
+                        ),
+                        RecipeCategory.MISC,
+                        ModTools.METEORIUM_SWORD.get()
+                ).unlocks("has_meteorium_ingot", has(ModItems.METEORIUM_INGOT.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(Meteorium.MODID, "smithing/meteorium_sword"));
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.METEORIUM_BLOCK.get())
                 .pattern("###")
                 .pattern("###")

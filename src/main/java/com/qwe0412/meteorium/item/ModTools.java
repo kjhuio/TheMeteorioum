@@ -1,9 +1,6 @@
 package com.qwe0412.meteorium.item;
 
-import net.minecraft.world.item.AxeItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.PickaxeItem;
-import net.minecraft.world.item.ShovelItem;
+import net.minecraft.world.item.*;
 import net.neoforged.neoforge.registries.DeferredItem;
 
 import static com.qwe0412.meteorium.item.ModItems.ITEMS;
@@ -47,6 +44,20 @@ public class ModTools {
                                     ModTiers.METEORIUM,
                                     1.5F,
                                     -3.0F
+                            )
+                    )
+            )
+    );
+
+    public static final DeferredItem<Item> METEORIUM_SWORD = ITEMS.register(
+            "meteorium_sword",
+            () -> new SwordItem(
+                    ModTiers.METEORIUM,
+                    new Item.Properties().attributes(
+                            SwordItem.createAttributes(
+                                    ModTiers.METEORIUM,
+                                    3F,
+                                    -2.4F
                             )
                     )
             )

@@ -26,5 +26,7 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(ModTools.METEORIUM_PICKAXE.get());
         tag(ItemTags.SHOVELS)
                 .add(ModTools.METEORIUM_SHOVEL.get());
+        tag(ItemTags.SWORDS)
+                .add(ModTools.METEORIUM_SWORD.get());
     }
 }
