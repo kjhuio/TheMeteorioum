@@ -28,7 +28,7 @@ public class ModTools {
                     new Item.Properties().attributes(
                             PickaxeItem.createAttributes(
                                     ModTiers.METEORIUM,
-                                    4,
+                                    7,
                                     -2.8f
                             )
                     )
@@ -56,7 +56,7 @@ public class ModTools {
                     new Item.Properties().attributes(
                             SwordItem.createAttributes(
                                     ModTiers.METEORIUM,
-                                    3F,
+                                    6F,
                                     -2.4F
                             )
                     )
@@ -70,7 +70,7 @@ public class ModTools {
                     new Item.Properties().attributes(
                             HoeItem.createAttributes(
                                     ModTiers.METEORIUM,
-                                    -3F,
+                                    3F,
                                     0F
                             )
                     )
