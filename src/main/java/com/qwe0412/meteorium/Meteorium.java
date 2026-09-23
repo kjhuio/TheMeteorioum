@@ -3,7 +3,6 @@ package com.qwe0412.meteorium;
 import com.mojang.logging.LogUtils;
 import com.qwe0412.meteorium.block.ModBlocks;
 import com.qwe0412.meteorium.item.ModItems;
-import com.qwe0412.meteorium.item.ModTools;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -32,7 +31,6 @@ public class Meteorium {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
-        ModTools.init();
 
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (Meteorium) to respond directly to events.

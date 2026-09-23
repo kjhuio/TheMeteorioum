@@ -37,7 +37,7 @@ public class ModTools {
             )
     );
 
-    public static void init() {
+    public static void addTools() {
 
     }
 }

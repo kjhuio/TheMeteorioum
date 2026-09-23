@@ -28,6 +28,10 @@ public class ModItems {
             )
     );
 
+    static {
+        ModTools.addTools();
+    }
+
     public static final DeferredItem<Item> METEORIUM_INGOT = ITEMS.register(
             "meteorium_ingot",
             () -> new Item(new Item.Properties())
