@@ -63,6 +63,20 @@ public class ModTools {
             )
     );
 
+    public static final DeferredItem<Item> METEORIUM_HOE = ITEMS.register(
+            "meteorium_hoe",
+            () -> new HoeItem(
+                    ModTiers.METEORIUM,
+                    new Item.Properties().attributes(
+                            HoeItem.createAttributes(
+                                    ModTiers.METEORIUM,
+                                    -3F,
+                                    0F
+                            )
+                    )
+            )
+    );
+
     public static void addTools() {
 
     }
