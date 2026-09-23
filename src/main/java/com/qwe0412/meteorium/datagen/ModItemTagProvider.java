@@ -1,13 +1,14 @@
 package com.qwe0412.meteorium.datagen;
 
 import com.qwe0412.meteorium.Meteorium;
-import com.qwe0412.meteorium.item.ModItems;
+import com.qwe0412.meteorium.item.ModTools;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
@@ -18,10 +19,10 @@ public class ModItemTagProvider extends ItemTagsProvider {
     }
 
     @Override
-    protected void addTags(HolderLookup.Provider provider) {
+    protected void addTags(HolderLookup.@NotNull Provider provider) {
         tag(ItemTags.AXES)
-                .add(ModItems.METEORIUM_AXE.get());
+                .add(ModTools.METEORIUM_AXE.get());
         tag(ItemTags.PICKAXES)
-                .add(ModItems.METEORIUM_PICKAXE.get());
+                .add(ModTools.METEORIUM_PICKAXE.get());
     }
 }

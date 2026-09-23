@@ -2,6 +2,7 @@ package com.qwe0412.meteorium.datagen;
 
 import com.qwe0412.meteorium.Meteorium;
 import com.qwe0412.meteorium.item.ModItems;
+import com.qwe0412.meteorium.item.ModTools;
 import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -16,7 +17,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.METEORIUM_UPGRADE.get());
         basicItem(ModItems.METEORIUM_INGOT.get());
 
-        handheldItem(ModItems.METEORIUM_AXE.get());
-        handheldItem(ModItems.METEORIUM_PICKAXE.get());
+        handheldItem(ModTools.METEORIUM_AXE.get());
+        handheldItem(ModTools.METEORIUM_PICKAXE.get());
     }
 }
