@@ -16,6 +16,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     protected void registerStatesAndModels() {
         blockWithItem(ModBlocks.STAR_CINDER);
         blockWithItem(ModBlocks.STARDUST_REVERIE);
+        blockWithItem(ModBlocks.METEORIUM_BLOCK);
     }
 
     private void blockWithItem(DeferredBlock<?> deferredBlock) {

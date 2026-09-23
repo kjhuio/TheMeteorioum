@@ -6,9 +6,8 @@ import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
-import net.minecraft.world.flag.FeatureFlagSet;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.Set;
 
@@ -24,10 +23,11 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         add(ModBlocks.STARDUST_REVERIE.get(),
                 block -> createSingleItemTable(ModItems.METEORIUM_UPGRADE.get())
                 );
+        dropSelf(ModBlocks.METEORIUM_BLOCK.get());
     }
 
     @Override
-    protected Iterable<Block> getKnownBlocks() {
+    protected @NotNull Iterable<Block> getKnownBlocks() {
         return ModBlocks.BLOCKS.getEntries().stream().map(Holder::value)::iterator;
     }
 }

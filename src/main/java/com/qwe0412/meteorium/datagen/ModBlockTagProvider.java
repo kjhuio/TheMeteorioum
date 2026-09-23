@@ -20,9 +20,12 @@ public class ModBlockTagProvider extends BlockTagsProvider {
     protected void addTags(HolderLookup.Provider provider) {
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.STAR_CINDER.get())
-                .add(ModBlocks.STARDUST_REVERIE.get());
+                .add(ModBlocks.STARDUST_REVERIE.get())
+                .add(ModBlocks.METEORIUM_BLOCK.get());
         tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.STAR_CINDER.get())
                 .add(ModBlocks.STARDUST_REVERIE.get());
+        tag(BlockTags.NEEDS_DIAMOND_TOOL)
+                .add(ModBlocks.METEORIUM_BLOCK.get());
     }
 }

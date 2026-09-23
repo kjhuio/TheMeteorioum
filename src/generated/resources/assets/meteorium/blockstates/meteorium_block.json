@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "meteorium:block/meteorium_block"
+    }
+  }
+}
