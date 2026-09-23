@@ -9,8 +9,8 @@ import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -21,7 +21,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     }
 
     @Override
-    protected void buildRecipes(RecipeOutput recipeOutput) {
+    protected void buildRecipes(@NotNull RecipeOutput recipeOutput) {
         SmithingTransformRecipeBuilder.smithing(Ingredient.of(ModItems.METEORIUM_UPGRADE.get()), Ingredient.of(Items.DIAMOND_AXE), Ingredient.of(ModItems.METEORIUM_INGOT.get()), RecipeCategory.MISC,ModItems.METEORIUM_AXE.get())
                 .unlocks("has_meteorium_ingot", has(ModItems.METEORIUM_INGOT.get()))
                 .save(recipeOutput,ResourceLocation.fromNamespaceAndPath(Meteorium.MODID, "smithing/meteorium_axe"));
