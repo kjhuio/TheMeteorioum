@@ -2,11 +2,8 @@ package com.qwe0412.meteorium.item;
 
 import com.qwe0412.meteorium.Meteorium;
 import com.qwe0412.meteorium.block.ModBlocks;
-import net.minecraft.ChatFormatting;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.Style;
-import net.minecraft.network.chat.TextColor;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.IEventBus;

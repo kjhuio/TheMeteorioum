@@ -1,6 +1,5 @@
 package com.qwe0412.meteorium.datagen;
 
-import com.qwe0412.meteorium.Meteorium;
 import com.qwe0412.meteorium.block.ModBlocks;
 import com.qwe0412.meteorium.block.ModOres;
 import com.qwe0412.meteorium.item.ModItems;

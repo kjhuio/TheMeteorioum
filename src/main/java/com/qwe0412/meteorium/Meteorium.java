@@ -4,7 +4,6 @@ import com.mojang.logging.LogUtils;
 import com.qwe0412.meteorium.block.ModBlocks;
 import com.qwe0412.meteorium.item.ModCreativeModeTabs;
 import com.qwe0412.meteorium.item.ModItems;
-import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Style;
 import net.minecraft.network.chat.TextColor;
 import net.neoforged.api.distmarker.Dist;
@@ -28,7 +27,7 @@ public class Meteorium {
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
-    public static Style MOD_THEME_COLOR = Style.EMPTY.withColor(TextColor.fromRgb(0xC7C7FF));
+    public static final Style MOD_THEME_COLOR = Style.EMPTY.withColor(TextColor.fromRgb(0xC7C7FF));
     // The constructor for the mod class is the first code that is run when your mod is loaded.
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
     public Meteorium(IEventBus modEventBus, ModContainer modContainer) {
