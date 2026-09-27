@@ -16,6 +16,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         basicItem(ModItems.METEORIUM_UPGRADE.get());
         basicItem(ModItems.METEORIUM_INGOT.get());
+        basicItem(ModItems.METEORIUM_DUST.get());
 
         handheldItem(ModTools.METEORIUM_AXE.get());
         handheldItem(ModTools.METEORIUM_PICKAXE.get());

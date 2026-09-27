@@ -57,6 +57,9 @@ public class ModBlocks {
         ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 
+    static{
+        ModOres.addOres();
+    }
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

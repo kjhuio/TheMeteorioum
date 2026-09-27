@@ -2,9 +2,11 @@ package com.qwe0412.meteorium.datagen;
 
 import com.qwe0412.meteorium.Meteorium;
 import com.qwe0412.meteorium.block.ModBlocks;
+import com.qwe0412.meteorium.block.ModOres;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
+import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.NotNull;
@@ -25,8 +27,13 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.METEORIUM_BLOCK.get());
         tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.STAR_CINDER.get())
-                .add(ModBlocks.STARDUST_REVERIE.get());
+                .add(ModBlocks.STARDUST_REVERIE.get())
+                .add(ModOres.METEORIUM_ORE.get())
+                .add(ModOres.DEEPSLATE_METEORIUM_ORE.get());
         tag(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.METEORIUM_BLOCK.get());
+        tag(Tags.Blocks.ORES)
+                .add(ModOres.METEORIUM_ORE.get())
+                .add(ModOres.DEEPSLATE_METEORIUM_ORE.get());
     }
 }

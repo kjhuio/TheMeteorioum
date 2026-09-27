@@ -28,14 +28,19 @@ public class ModItems {
             )
     );
 
-    static {
-        ModTools.addTools();
-    }
-
     public static final DeferredItem<Item> METEORIUM_INGOT = ITEMS.register(
             "meteorium_ingot",
             () -> new Item(new Item.Properties())
     );
+
+    public static final DeferredItem<Item> METEORIUM_DUST = ITEMS.register(
+            "meteorium_dust",
+            () -> new Item(new Item.Properties())
+    );
+
+    static {
+        ModTools.addTools();
+    }
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

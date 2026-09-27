@@ -2,6 +2,7 @@ package com.qwe0412.meteorium.datagen;
 
 import com.qwe0412.meteorium.Meteorium;
 import com.qwe0412.meteorium.block.ModBlocks;
+import com.qwe0412.meteorium.block.ModOres;
 import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -17,6 +18,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.STAR_CINDER);
         blockWithItem(ModBlocks.STARDUST_REVERIE);
         blockWithItem(ModBlocks.METEORIUM_BLOCK);
+        blockWithItem(ModOres.METEORIUM_ORE);
+        blockWithItem(ModOres.DEEPSLATE_METEORIUM_ORE);
     }
 
     private void blockWithItem(DeferredBlock<?> deferredBlock) {

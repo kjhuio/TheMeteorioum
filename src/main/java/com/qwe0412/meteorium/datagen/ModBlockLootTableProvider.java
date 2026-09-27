@@ -1,6 +1,8 @@
 package com.qwe0412.meteorium.datagen;
 
+import com.qwe0412.meteorium.Meteorium;
 import com.qwe0412.meteorium.block.ModBlocks;
+import com.qwe0412.meteorium.block.ModOres;
 import com.qwe0412.meteorium.item.ModItems;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
@@ -24,6 +26,20 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                 block -> createSingleItemTable(ModItems.METEORIUM_UPGRADE.get())
                 );
         dropSelf(ModBlocks.METEORIUM_BLOCK.get());
+        add(
+                ModOres.METEORIUM_ORE.get(),
+                block -> createOreDrop(
+                        block,
+                        ModItems.METEORIUM_DUST.get()
+                )
+        );
+        add(
+                ModOres.DEEPSLATE_METEORIUM_ORE.get(),
+                block -> createOreDrop(
+                        block,
+                        ModItems.METEORIUM_DUST.get()
+                )
+        );
     }
 
     @Override

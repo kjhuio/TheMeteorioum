@@ -1,12 +1,14 @@
 package com.qwe0412.meteorium.datagen;
 
 import com.qwe0412.meteorium.Meteorium;
+import com.qwe0412.meteorium.item.ModItems;
 import com.qwe0412.meteorium.item.ModTools;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.level.block.Block;
+import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -29,6 +31,16 @@ public class ModItemTagProvider extends ItemTagsProvider {
         tag(ItemTags.SWORDS)
                 .add(ModTools.METEORIUM_SWORD.get());
         tag(ItemTags.HOES)
+                .add(ModTools.METEORIUM_HOE.get());
+        tag(Tags.Items.DUSTS)
+                .add(ModItems.METEORIUM_DUST.get());
+        tag(Tags.Items.INGOTS)
+                .add(ModItems.METEORIUM_INGOT.get());
+        tag(Tags.Items.TOOLS)
+                .add(ModTools.METEORIUM_AXE.get())
+                .add(ModTools.METEORIUM_PICKAXE.get())
+                .add(ModTools.METEORIUM_SHOVEL.get())
+                .add(ModTools.METEORIUM_SWORD.get())
                 .add(ModTools.METEORIUM_HOE.get());
     }
 }
