@@ -24,7 +24,9 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.STAR_CINDER.get())
                 .add(ModBlocks.STARDUST_REVERIE.get())
-                .add(ModBlocks.METEORIUM_BLOCK.get());
+                .add(ModBlocks.METEORIUM_BLOCK.get())
+                .add(ModOres.METEORIUM_ORE.get())
+                .add(ModOres.DEEPSLATE_METEORIUM_ORE.get());
         tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.STAR_CINDER.get())
                 .add(ModBlocks.STARDUST_REVERIE.get())

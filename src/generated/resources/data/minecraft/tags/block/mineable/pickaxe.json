@@ -2,6 +2,8 @@
   "values": [
     "meteorium:star_cinder",
     "meteorium:stardust_reverie",
-    "meteorium:meteorium_block"
+    "meteorium:meteorium_block",
+    "meteorium:meteorium_ore",
+    "meteorium:deepslate_meteorium_ore"
   ]
 }
