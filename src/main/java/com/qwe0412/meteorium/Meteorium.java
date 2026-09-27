@@ -48,15 +48,18 @@ public class Meteorium {
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
+        LOGGER.info("The Meteorium is loaded(common)");
     }
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        LOGGER.info("The Meteorium is loaded(client)");
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
+        LOGGER.info("The Meteorium is loaded(server)");
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
