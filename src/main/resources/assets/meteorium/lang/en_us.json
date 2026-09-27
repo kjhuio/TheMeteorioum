@@ -5,6 +5,9 @@
   "block.meteorium.star_cinder": "Star Cinder",
   "block.meteorium.meteorium_block": "Meteorium Block",
 
+  "block.meteorium.meteorium_ore": "Meteorium Ore",
+  "block.meteorium.deepslate_meteorium_ore": "Deepslate Meteorium Ore",
+
   "item.meteorium.meteorium_upgrade": "Star Smithing Template",
   "item.meteorium.meteorium_ingot": "Meteorium Ingot",
   "item.meteorium.meteorium_ingot.add": "Add Meteorium Ingot",
