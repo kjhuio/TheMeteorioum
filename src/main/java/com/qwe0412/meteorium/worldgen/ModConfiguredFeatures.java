@@ -2,7 +2,6 @@ package com.qwe0412.meteorium.worldgen;
 
 import com.qwe0412.meteorium.Meteorium;
 import com.qwe0412.meteorium.block.ModOres;
-import net.minecraft.core.Registry;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;
