@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_meteorium_dust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "meteorium:meteorium_dust"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "meteorium:shapeless/dust_to_meteorium_ingot"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_meteorium_dust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "meteorium:shapeless/dust_to_meteorium_ingot"
+    ]
+  }
+}

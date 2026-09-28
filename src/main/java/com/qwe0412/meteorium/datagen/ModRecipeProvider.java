@@ -97,5 +97,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModBlocks.METEORIUM_BLOCK.get())
                 .unlockedBy("has_meteorium_ingot", has(ModItems.METEORIUM_INGOT.get()))
                 .save(recipeOutput,ResourceLocation.fromNamespaceAndPath(Meteorium.MODID, "shapeless/meteorium_ingot"));
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.METEORIUM_INGOT.get())
+                .requires(Items.COPPER_INGOT)
+                .requires(ModItems.METEORIUM_DUST.get())
+                .unlockedBy("has_meteorium_dust", has(ModItems.METEORIUM_DUST.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(Meteorium.MODID, "shapeless/dust_to_meteorium_ingot"));
     }
 }
