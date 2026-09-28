@@ -1,9 +1,7 @@
 package com.qwe0412.meteorium.datagen;
 
 import com.qwe0412.meteorium.Meteorium;
-import com.qwe0412.meteorium.worldgen.ModBiomeModifiers;
-import com.qwe0412.meteorium.worldgen.ModConfiguredFeatures;
-import com.qwe0412.meteorium.worldgen.ModPlacedFeatures;
+import com.qwe0412.meteorium.worldgen.*;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.RegistrySetBuilder;
 import net.minecraft.core.registries.Registries;
@@ -18,7 +16,10 @@ public class ModDatapackProvider extends DatapackBuiltinEntriesProvider {
     public static final RegistrySetBuilder BUILDER = new RegistrySetBuilder()
             .add(Registries.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap)
             .add(Registries.PLACED_FEATURE, ModPlacedFeatures::bootstrap)
-            .add(NeoForgeRegistries.Keys.BIOME_MODIFIERS, ModBiomeModifiers::bootstrap);
+            .add(NeoForgeRegistries.Keys.BIOME_MODIFIERS, ModBiomeModifiers::bootstrap)
+            .add(Registries.TEMPLATE_POOL, ModTemplatePools::bootstrap)
+            .add(Registries.STRUCTURE, ModStructures::bootstrap)
+            .add(Registries.STRUCTURE_SET, ModStructureSets::bootstrap);
 
     public ModDatapackProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
         super(output, registries, BUILDER, Set.of(Meteorium.MODID));
