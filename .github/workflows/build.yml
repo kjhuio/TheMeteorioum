@@ -38,6 +38,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Download artifacts
+        uses: actions/download-artifact@v8
+        with:
+          name: build-jars
+          path: build/libs/
+
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
