@@ -2,6 +2,7 @@ package com.qwe0412.meteorium.item;
 
 import com.qwe0412.meteorium.Meteorium;
 import com.qwe0412.meteorium.block.ModBlocks;
+import com.qwe0412.meteorium.block.ModOres;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -23,6 +24,11 @@ public class ModCreativeModeTabs {
                     )
                     .displayItems(
                             (itemDisplayParameters, output) -> {
+                                output.accept(ModBlocks.STAR_CINDER);
+                                output.accept(ModBlocks.STARDUST_REVERIE);
+                                output.accept(ModOres.METEORIUM_ORE);
+                                output.accept(ModOres.DEEPSLATE_METEORIUM_ORE);
+                                output.accept(ModItems.METEORIUM_DUST);
                                 output.accept(ModItems.METEORIUM_INGOT);
                                 output.accept(ModBlocks.METEORIUM_BLOCK);
                                 output.accept(ModItems.METEORIUM_UPGRADE);
