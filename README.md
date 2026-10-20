@@ -3,4 +3,5 @@
 ## What's this
 This mod is adds meteorite motief weapons & tools.
 ## How do I obtain items?
-Currently, only the Creative tab is available.
+Locate a "Meteorite" underground, destroy the "Stardust Reverie" found inside, and obtain a "Smithing Template." Next, mine the "Meteorium Ore"—also generated underground—to acquire "Meteorium Dust." Combine this dust with a "Copper Ingot" to create a "Meteorium Ingot." Finally, by combining any diamond tool with the Smithing Template and the Meteorium Ingot, you can craft a Meteorium tool.
+Meteorium tools are extraordinarily powerful.
