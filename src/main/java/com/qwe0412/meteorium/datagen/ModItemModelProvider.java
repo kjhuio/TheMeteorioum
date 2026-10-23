@@ -1,6 +1,7 @@
 package com.qwe0412.meteorium.datagen;
 
 import com.qwe0412.meteorium.Meteorium;
+import com.qwe0412.meteorium.item.ModArmors;
 import com.qwe0412.meteorium.item.ModItems;
 import com.qwe0412.meteorium.item.ModTools;
 import net.minecraft.data.PackOutput;
@@ -17,6 +18,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.METEORIUM_UPGRADE.get());
         basicItem(ModItems.METEORIUM_INGOT.get());
         basicItem(ModItems.METEORIUM_DUST.get());
+
+        basicItem(ModArmors.METEORIUM_HELMET.get());
+        basicItem(ModArmors.METEORIUM_CHESTPLATE.get());
+        basicItem(ModArmors.METEORIUM_LEGGINGS.get());
+        basicItem(ModArmors.METEORIUM_BOOTS.get());
 
         handheldItem(ModTools.METEORIUM_AXE.get());
         handheldItem(ModTools.METEORIUM_PICKAXE.get());

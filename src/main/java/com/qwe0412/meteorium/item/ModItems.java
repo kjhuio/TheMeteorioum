@@ -40,6 +40,7 @@ public class ModItems {
 
     static {
         ModTools.addTools();
+        ModArmors.addArmors();
     }
 
     public static void register(IEventBus eventBus) {
