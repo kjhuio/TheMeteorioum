@@ -28,17 +28,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     protected void buildRecipes(@NotNull RecipeOutput recipeOutput) {
 
         // Upgrade Diamond Tools to Meteorium Tools
-        upgradeToMeteorium(recipeOutput, Items.DIAMOND_AXE, ModTools.METEORIUM_AXE, RecipeCategory.COMBAT);
-        upgradeToMeteorium(recipeOutput, Items.DIAMOND_SWORD, ModTools.METEORIUM_SWORD, RecipeCategory.COMBAT);
-        upgradeToMeteorium(recipeOutput, Items.DIAMOND_PICKAXE, ModTools.METEORIUM_PICKAXE, RecipeCategory.TOOLS);
-        upgradeToMeteorium(recipeOutput, Items.DIAMOND_SHOVEL, ModTools.METEORIUM_SHOVEL, RecipeCategory.TOOLS);
-        upgradeToMeteorium(recipeOutput, Items.DIAMOND_HOE, ModTools.METEORIUM_HOE, RecipeCategory.TOOLS);
+        upgradeToMeteorium(recipeOutput, Items.DIAMOND_AXE, ModTools.METEORIUM_AXE);
+        upgradeToMeteorium(recipeOutput, Items.DIAMOND_SWORD, ModTools.METEORIUM_SWORD);
+        upgradeToMeteorium(recipeOutput, Items.DIAMOND_PICKAXE, ModTools.METEORIUM_PICKAXE);
+        upgradeToMeteorium(recipeOutput, Items.DIAMOND_SHOVEL, ModTools.METEORIUM_SHOVEL);
+        upgradeToMeteorium(recipeOutput, Items.DIAMOND_HOE, ModTools.METEORIUM_HOE);
 
         // Upgrade Diamond Armor to Meteorium Armor
-        upgradeToMeteorium(recipeOutput, Items.DIAMOND_HELMET, ModArmors.METEORIUM_HELMET, RecipeCategory.COMBAT);
-        upgradeToMeteorium(recipeOutput, Items.DIAMOND_CHESTPLATE, ModArmors.METEORIUM_CHESTPLATE, RecipeCategory.COMBAT);
-        upgradeToMeteorium(recipeOutput, Items.DIAMOND_LEGGINGS, ModArmors.METEORIUM_LEGGINGS, RecipeCategory.COMBAT);
-        upgradeToMeteorium(recipeOutput, Items.DIAMOND_BOOTS, ModArmors.METEORIUM_BOOTS, RecipeCategory.COMBAT);
+        upgradeToMeteorium(recipeOutput, Items.DIAMOND_HELMET, ModArmors.METEORIUM_HELMET);
+        upgradeToMeteorium(recipeOutput, Items.DIAMOND_CHESTPLATE, ModArmors.METEORIUM_CHESTPLATE);
+        upgradeToMeteorium(recipeOutput, Items.DIAMOND_LEGGINGS, ModArmors.METEORIUM_LEGGINGS);
+        upgradeToMeteorium(recipeOutput, Items.DIAMOND_BOOTS, ModArmors.METEORIUM_BOOTS);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.METEORIUM_BLOCK.get())
                 .pattern("###")
@@ -60,7 +60,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     }
 
-    private void upgradeToMeteorium(RecipeOutput recipeOut, Item base, DeferredItem<Item> result, RecipeCategory category) {
+    private void upgradeToMeteorium(RecipeOutput recipeOut, Item base, DeferredItem<Item> result) {
         SmithingTransformRecipeBuilder.smithing(
                         Ingredient.of(
                                 ModItems.METEORIUM_UPGRADE.get()
@@ -71,7 +71,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         Ingredient.of(
                                 ModItems.METEORIUM_INGOT.get()
                         ),
-                        category,
+                        RecipeCategory.MISC,
                         result.get()
                 ).unlocks("has_meteorium_ingot", has(ModItems.METEORIUM_INGOT.get()))
                 .save(recipeOut, ResourceLocation.fromNamespaceAndPath(Meteorium.MODID, "smithing/" + getItemName(result.get())));
