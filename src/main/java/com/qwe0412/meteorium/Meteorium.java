@@ -30,8 +30,9 @@ public class Meteorium {
     public Meteorium(IEventBus modEventBus, ModContainer modContainer) {
         modEventBus.addListener(this::commonSetup);
 
-        ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModItems.register(modEventBus);
+
         ModCreativeModeTabs.register(modEventBus);
 
         NeoForge.EVENT_BUS.register(this);

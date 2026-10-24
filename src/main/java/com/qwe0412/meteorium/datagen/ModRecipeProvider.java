@@ -2,7 +2,7 @@ package com.qwe0412.meteorium.datagen;
 
 import com.qwe0412.meteorium.Meteorium;
 import com.qwe0412.meteorium.block.ModBlocks;
-import com.qwe0412.meteorium.item.ModArmors;
+import com.qwe0412.meteorium.item.ModArmor;
 import com.qwe0412.meteorium.item.ModItems;
 import com.qwe0412.meteorium.item.ModTools;
 import net.minecraft.core.HolderLookup;
@@ -35,10 +35,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         upgradeToMeteorium(recipeOutput, Items.DIAMOND_HOE, ModTools.METEORIUM_HOE);
 
         // Upgrade Diamond Armor to Meteorium Armor
-        upgradeToMeteorium(recipeOutput, Items.DIAMOND_HELMET, ModArmors.METEORIUM_HELMET);
-        upgradeToMeteorium(recipeOutput, Items.DIAMOND_CHESTPLATE, ModArmors.METEORIUM_CHESTPLATE);
-        upgradeToMeteorium(recipeOutput, Items.DIAMOND_LEGGINGS, ModArmors.METEORIUM_LEGGINGS);
-        upgradeToMeteorium(recipeOutput, Items.DIAMOND_BOOTS, ModArmors.METEORIUM_BOOTS);
+        upgradeToMeteorium(recipeOutput, Items.DIAMOND_HELMET, ModArmor.METEORIUM_HELMET);
+        upgradeToMeteorium(recipeOutput, Items.DIAMOND_CHESTPLATE, ModArmor.METEORIUM_CHESTPLATE);
+        upgradeToMeteorium(recipeOutput, Items.DIAMOND_LEGGINGS, ModArmor.METEORIUM_LEGGINGS);
+        upgradeToMeteorium(recipeOutput, Items.DIAMOND_BOOTS, ModArmor.METEORIUM_BOOTS);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.METEORIUM_BLOCK.get())
                 .pattern("###")

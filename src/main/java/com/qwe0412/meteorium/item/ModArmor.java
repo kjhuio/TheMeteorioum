@@ -4,7 +4,7 @@ import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.registries.DeferredItem;
 
-public class ModArmors {
+public class ModArmor {
     private static final int DURABILITY = 1073741824;
 
     public static final DeferredItem<Item> METEORIUM_BOOTS

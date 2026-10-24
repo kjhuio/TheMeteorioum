@@ -1,13 +1,12 @@
 package com.qwe0412.meteorium.item;
 
 import com.qwe0412.meteorium.Meteorium;
-import com.qwe0412.meteorium.block.ModBlocks;
-import com.qwe0412.meteorium.block.ModOres;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.function.Supplier;
@@ -19,25 +18,11 @@ public class ModCreativeModeTabs {
     public static final Supplier<CreativeModeTab> THE_METEORIUM = CREATIVE_MODE_TAB.register(
             "the_meteorium",
             () -> CreativeModeTab.builder()
-                    .icon(
-                            () -> new ItemStack(ModItems.METEORIUM_INGOT.get())
-                    )
-                    .displayItems(
-                            (itemDisplayParameters, output) -> {
-                                output.accept(ModBlocks.STAR_CINDER);
-                                output.accept(ModBlocks.STARDUST_REVERIE);
-                                output.accept(ModOres.METEORIUM_ORE);
-                                output.accept(ModOres.DEEPSLATE_METEORIUM_ORE);
-                                output.accept(ModItems.METEORIUM_DUST);
-                                output.accept(ModItems.METEORIUM_INGOT);
-                                output.accept(ModBlocks.METEORIUM_BLOCK);
-                                output.accept(ModItems.METEORIUM_UPGRADE);
-                                output.accept(ModTools.METEORIUM_SWORD);
-                                output.accept(ModTools.METEORIUM_AXE);
-                                output.accept(ModTools.METEORIUM_PICKAXE);
-                                output.accept(ModTools.METEORIUM_SHOVEL);
-                                output.accept(ModTools.METEORIUM_HOE);
-                            }
+                    .icon(ModItems.METEORIUM_INGOT::toStack)
+                    .displayItems((itemDisplayParameters, output) ->
+                            ModItems.ITEMS.getEntries().stream()
+                                    .map(DeferredHolder::get)
+                                    .forEach(output::accept)
                     )
                     .title(Component.translatable("itemGroup.meteorium.the_meteorium").withStyle(Meteorium.MOD_THEME_COLOR))
                     .build()
