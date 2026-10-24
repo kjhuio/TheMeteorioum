@@ -22,7 +22,7 @@ jobs:
       - name: 'Qodana Scan'
         uses: JetBrains/qodana-action@v2026.1
         with:
-          args: --linter,jetbrains/qodana-jvm-community
+          args: --linter,jetbrains/qodana-jvm-community:2026.2
         env:
           QODANA_TOKEN: ${{ secrets.QODANA_TOKEN_1225713422 }}
           QODANA_ENDPOINT: 'https://qodana.cloud'
