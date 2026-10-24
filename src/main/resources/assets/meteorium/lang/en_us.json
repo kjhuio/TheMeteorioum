@@ -20,5 +20,10 @@
   "item.meteorium.meteorium_sword": "Meteorium Sword",
   "item.meteorium.meteorium_hoe": "Meteorium Hoe",
 
+  "item.meteorium.meteorium_helmet": "Meteorium Helmet",
+  "item.meteorium.meteorium_chestplate": "Meteorium Chestplate",
+  "item.meteorium.meteorium_leggings": "Meteorium Leggings",
+  "item.meteorium.meteorium_boots": "Meteorium Boots",
+
   "upgrade.meteorium.meteorium_upgrade": "Meteorium Upgrade"
 }

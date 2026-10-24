@@ -20,5 +20,10 @@
   "item.meteorium.meteorium_sword": "メテオリウムの剣",
   "item.meteorium.meteorium_hoe": "メテオリウムのクワ",
 
+  "item.meteorium.meteorium_helmet": "メテオリウムのヘルメット",
+  "item.meteorium.meteorium_chestplate": "メテオリウムのチェストプレート",
+  "item.meteorium.meteorium_leggings": "メテオリウムのレギンス",
+  "item.meteorium.meteorium_boots": "メテオリウムのブーツ",
+
   "upgrade.meteorium.meteorium_upgrade": "メテオリウム強化"
 }
